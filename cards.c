@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <time.h>
 
 #define MAXPILE 52
 
@@ -22,19 +23,28 @@ typedef struct{
     Card discard_pile[MAXPILE];
 } Deck;
 
-void changeindex1(Deck*, Card*);
+void print_card(Card* card);
+Card* random_card();
 
 int main(){
-    Card* card;
-    card->suit = CLUBS;
-    card->rank = ACE;
-    Deck* deck;
-    deck->discard_pile[0] = *card;
-    changeindex1(deck, card);
-    printf("%d", deck->discard_pile[0].suit);
+    Card* my_card = random_card();
+    print_card(my_card);
     return 0;
 }
 
-void changeindex1(Deck* deck, Card* card){
-    deck->discard_pile[1] = *card;
+void print_card(Card* card){
+    char suit[][10] = {"Spades", "Clubs", "Hearts", "Diamonds"};
+    char rank[][8] = {"Ace", "Two", "Three", "Four", "Five", "Six",
+    "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
+
+    printf("Suit: %s\n", suit[card->suit]);
+    printf("Rank: %s\n", rank[card->rank - 1]);
+}
+
+Card* random_card(){
+    Card* card;
+    srand(time(NULL));
+    card->suit = rand() % 4;
+    card->rank = 1 + rand() % 13;
+    return card;
 }
