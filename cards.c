@@ -25,13 +25,13 @@ typedef struct{
 void changeindex1(Deck*, Card*);
 
 int main(){
-    Card card;
-    card.suit = CLUBS;
-    card.rank = ACE;
-    Deck deck;
-    deck.discard_pile[0] = card;
-    changeindex1(&deck, &card);
-    printf("%d", deck.discard_pile[0].suit);
+    Card* card;
+    card->suit = CLUBS;
+    card->rank = ACE;
+    Deck* deck;
+    deck->discard_pile[0] = *card;
+    changeindex1(deck, card);
+    printf("%d", deck->discard_pile[0].suit);
     return 0;
 }
 
