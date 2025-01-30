@@ -25,4 +25,5 @@ typedef struct{
 
 int main(){
     printf("Hello vro!");
+    return 0;
 }
