@@ -22,8 +22,19 @@ typedef struct{
     Card discard_pile[MAXPILE];
 } Deck;
 
+void changeindex1(Deck*, Card*);
 
 int main(){
-    printf("Hello vro!");
+    Card card;
+    card.suit = CLUBS;
+    card.rank = ACE;
+    Deck deck;
+    deck.discard_pile[0] = card;
+    changeindex1(&deck, &card);
+    printf("%d", deck.discard_pile[0].suit);
     return 0;
+}
+
+void changeindex1(Deck* deck, Card* card){
+    deck->discard_pile[1] = *card;
 }
