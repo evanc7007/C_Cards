@@ -26,5 +26,5 @@ clean:
 run: $(TARGET)
 	./$(TARGET) 
 
-# Phony targets
-.PHONY: run clean
+# Runs and cleans targets
+.run: run clean
