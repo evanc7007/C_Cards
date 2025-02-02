@@ -13,9 +13,13 @@ void print_card(Card* card){
 }
 
 Card* random_card(){
-    Card* card = malloc(sizeof(card));
+    Card* card = (Card*)malloc(sizeof(card));
     srand(time(NULL));
     card->suit = rand() % 4;
     card->rank = 1 + rand() % 13;
     return card;
+}
+
+void destroy_card(Card* card){
+    free(card);
 }

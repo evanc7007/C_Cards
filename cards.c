@@ -8,5 +8,6 @@
 int main(){
     Card* my_card = random_card();
     print_card(my_card);
+    destroy_card(my_card);
     return 0;
 }
