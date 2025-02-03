@@ -1,9 +1,6 @@
 #ifndef CARD_H
 #define CARD_H
 
-
-#define MAXPILE 52
-
 //enum for suits
 typedef enum{SPADES, CLUBS, HEARTS, DIAMONDS} Suit;
 //enum for ranks

@@ -13,7 +13,7 @@ void print_card(Card* card){
 }
 
 Card* random_card(){
-    Card* card = (Card*)malloc(sizeof(card));
+    Card* card = (Card*)malloc(sizeof(Card));
     srand(time(NULL));
     card->suit = rand() % 4;
     card->rank = 1 + rand() % 13;
