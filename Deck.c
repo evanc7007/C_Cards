@@ -1,5 +1,4 @@
 #include "Deck.h"
-#include "Card.h"
 #include <stdlib.h>
 
 Deck* make_deck(){
