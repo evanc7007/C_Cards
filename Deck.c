@@ -8,8 +8,8 @@ Deck* make_deck(){
         deck->draw_pile[i].suit = i / 13;
     }
     for(int j = 0; j < MAXPILE; j++){
-        deck->discard_pile[j].rank = 14;
-        deck->discard_pile[j].suit = 4;
+        deck->discard_pile[j].rank = EMPTYRANK;
+        deck->discard_pile[j].suit = EMPTYSUIT;
     }
     return deck;
 }

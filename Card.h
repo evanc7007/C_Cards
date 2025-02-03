@@ -2,10 +2,10 @@
 #define CARD_H
 
 //enum for suits
-typedef enum{SPADES, CLUBS, HEARTS, DIAMONDS} Suit;
+typedef enum{SPADES, CLUBS, HEARTS, DIAMONDS, EMPTYSUIT} Suit;
 //enum for ranks
 typedef enum{ACE = 1, TWO, THREE, FOUR, FIVE, SIX,
-    SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING} Rank;
+    SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, EMPTYRANK} Rank;
 
 //struct for a card
 typedef struct{
