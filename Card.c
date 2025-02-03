@@ -4,9 +4,9 @@
 #include <time.h>
 
 void print_card(Card* card){
-    char suit[][10] = {"Spades", "Clubs", "Hearts", "Diamonds"};
+    char suit[][10] = {"Spades", "Clubs", "Hearts", "Diamonds", "Null"};
     char rank[][8] = {"Ace", "Two", "Three", "Four", "Five", "Six",
-    "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
+    "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Null"};
 
     printf("Suit: %s\n", suit[card->suit]);
     printf("Rank: %s\n", rank[card->rank - 1]);
