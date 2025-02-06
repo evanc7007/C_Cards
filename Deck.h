@@ -10,7 +10,7 @@ typedef struct{
     Card discard_pile[MAXPILE];
 } Deck;
 
-Deck* make_deck();
+Deck* make_deck(void);
 void destroy_deck(Deck* deck);
 
 #endif

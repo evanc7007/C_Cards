@@ -12,7 +12,7 @@ void print_card(Card* card){
     printf("Rank: %s\n", rank[card->rank - 1]);
 }
 
-Card* random_card(){
+Card* random_card(void){
     Card* card = (Card*)malloc(sizeof(Card));
     srand(time(NULL));
     card->suit = rand() % 4;

@@ -13,7 +13,7 @@ typedef struct{
     Rank rank;
 } Card;
 
-Card* random_card();
+Card* random_card(void);
 void print_card(Card* card);
 void destroy_card(Card* card);
 
